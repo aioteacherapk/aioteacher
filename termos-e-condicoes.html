@@ -9,7 +9,8 @@
     * { box-sizing: border-box; }
     body { margin: 0; background: #f4f7fb; color: #1f2937; font-family: Arial, sans-serif; line-height: 1.65; }
     main { max-width: 760px; margin: 24px auto; background: #fff; border-radius: 18px; padding: 28px 30px; box-shadow: 0 12px 32px rgba(15,76,129,.12); }
-    h1 { color: #0f4c81; margin: 0 0 22px; text-align: center; }
+    h1 { color: #0f4c81; margin: 0 0 6px; text-align: center; }
+    .updated { text-align: center; color: #64748b; font-size: 13px; margin: 0 0 22px; }
     h2 { color: #0f4c81; font-size: 18px; margin: 22px 0 8px; }
     p { margin: 0 0 14px; }
     a { color: #0f4c81; }
@@ -20,6 +21,7 @@
 <body>
   <main>
     <h1>Termos e Condições</h1>
+    <p class="updated">Última atualização: <span id="data-atualizacao">novembro de 2026</span></p>
 
     <h2>1. Identificação</h2>
     <p>O Aio Teacher é uma plataforma desenvolvida e mantida pela <strong>Aio Studio</strong>, responsável pelo desenvolvimento técnico, manutenção e evolução do sistema, bem como pelos seus desenvolvedores e criadores de conteúdo, que produzem e organizam os materiais pedagógicos disponibilizados aos professores.</p>
@@ -42,7 +44,17 @@
     <h2>7. Legislação Aplicável</h2>
     <p>Os presentes Termos e Condições regem-se pelas leis da República de Angola, sendo o foro dos tribunais angolanos competente para dirimir qualquer litígio decorrente da interpretação ou aplicação destes termos.</p>
 
-    <footer><a href="politica-de-privacidade.html">Política de Privacidade</a> • Aio Teacher • Aio Studio</footer>
+    <footer><a href="politica-de-privacidade.html">Política de Privacidade</a> • © <span id="ano-atual">2026</span> Aio Teacher • Aio Studio</footer>
   </main>
+  <script>
+    (function () {
+      var meses = ["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"];
+      var d = new Date();
+      var el = document.getElementById("data-atualizacao");
+      if (el) el.textContent = meses[d.getMonth()] + " de " + d.getFullYear();
+      var ano = document.getElementById("ano-atual");
+      if (ano) ano.textContent = d.getFullYear();
+    })();
+  </script>
 </body>
 </html>
