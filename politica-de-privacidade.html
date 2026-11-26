@@ -73,7 +73,7 @@
     <h2>11. Legislação aplicável</h2>
     <p>A presente Política rege-se pelas leis da República de Angola, incluindo a Lei da Proteção de Dados Pessoais, sendo o foro dos tribunais angolanos competente para dirimir qualquer litígio dela decorrente. Leia também os nossos <a href="termos-e-condicoes.html">Termos e Condições</a>.</p>
 
-    <footer><a href="termos-e-condicoes.html">Termos e Condições</a> • Aio Teacher • Aio Studio</footer>
+    <footer><a href="termos-e-condicoes.html">Termos e Condições</a> • © <span id="ano-atual">2026</span> Aio Teacher • Aio Studio</footer>
   </main>
   <script>
     (function () {
@@ -81,6 +81,8 @@
       var d = new Date();
       var el = document.getElementById("data-atualizacao");
       if (el) el.textContent = meses[d.getMonth()] + " de " + d.getFullYear();
+      var ano = document.getElementById("ano-atual");
+      if (ano) ano.textContent = d.getFullYear();
     })();
   </script>
 </body>
